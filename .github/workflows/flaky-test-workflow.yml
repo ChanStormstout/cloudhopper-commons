@@ -16,8 +16,8 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
 
-    - name: Run tests normally
-      run: mvn test
+    - name: Install and test modules
+      run: mvn install
 
     - name: Run tests with NonDex
       run: mvn edu.illinois:nondex-maven-plugin:1.1.2:nondex
