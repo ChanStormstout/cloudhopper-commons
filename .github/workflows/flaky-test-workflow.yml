@@ -17,7 +17,7 @@ jobs:
         distribution: 'adopt'
 
     - name: Install and test modules
-      run: mvn install
+      run: mvn clean install
 
     - name: Run tests with NonDex
       run: mvn edu.illinois:nondex-maven-plugin:1.1.2:nondex
