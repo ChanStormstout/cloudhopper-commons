@@ -21,7 +21,9 @@
     <dependency>
       <groupId>com.cloudhopper</groupId>
       <artifactId>ch-commons-util</artifactId>
-      <version>6.0.4-SNAPSHOT</version>
+      <version>6.0.5-SNAPSHOT</version>
+    </dependency>
+
     </dependency>
     <!-- provided scope -->
     <!-- runtime scope -->
