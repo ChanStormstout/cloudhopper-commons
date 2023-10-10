@@ -17,7 +17,10 @@ jobs:
         distribution: 'adopt'
 
     - name: Install and test modules
-      run: mvn clean install
+      run: mvn clean install -DskipTests -pl ch-commons-util -am
+
+    - name: Run normally
+      run:  mvn -pl ch-commons-util test -Dtest=com.cloudhopper.commons.util.MetaFieldUtilTest#toMetaFieldInfoArray
 
     - name: Run tests with NonDex
-      run: mvn edu.illinois:nondex-maven-plugin:1.1.2:nondex
+      run: mvn -pl ch-commons-util edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=com.cloudhopper.commons.util.MetaFieldUtilTest#toMetaFieldInfoArray
